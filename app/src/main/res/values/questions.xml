@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="Questions">
+    <item>Is the initial Password 0000?(yes/no)</item>
+    <item>What is your favorite colour?</item>
+    <item>What is your favorite fruit?</item>
+    <item>What is your favorite pet?</item>
+</string-array>
+</resources>

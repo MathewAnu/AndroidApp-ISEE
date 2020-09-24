@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#dd3333</color>
-    <color name="colorPrimaryDark">#d11616</color>
-    <color name="colorAccent">#FF4081</color>
     <color name="colourWhite">#FFFFFF</color>
     <color name="colorGrapeFruit">#ED5565</color>
     <color name="colorGrapeFruitDark">#DA4453</color>
@@ -15,7 +12,9 @@
     <color name="colorBlueJeans">#509CEC</color>
     <color name="colorLavanderDark">#967ADC</color>
     <color name="colorBlueJeansDark">#4A89DC</color>
-    <color name="colorLavander">#AC92EC</color>
+    <color name="lavenderLight">#AC87ED</color>
+    <color name="colorLavander">#AC87ED</color>
+    <color name="colorLightLightLavender">#E1DBF8</color>
 
 
 

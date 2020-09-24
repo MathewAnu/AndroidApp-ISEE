@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:orientation="vertical"
+    android:background="@color/colorLavanderDark">
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/colorLavanderDark"
+        android:gravity="bottom"
+        android:text="Send Feedback"
+        android:textAlignment="center"
+        android:textColor="#F2F1F4"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/txtSub"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:text="\n \tLet us know what you think about this app?"
+        android:textColor="@color/colorLightLightLavender"
+        android:textSize="15dp"
+        android:background="@color/colorLavanderDark"/>
+
+    <EditText
+        android:id="@+id/txtMsg"
+        android:layout_width="match_parent"
+        android:layout_height="546dp"
+        android:layout_weight="1"
+        android:background="@drawable/edit_text_boarder"
+        android:gravity="top"
+        android:hint="\t Message"
+        android:textColor="@color/colourWhite"
+        android:textColorHint="@color/colorLightLightLavender" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="Send"
+        android:textSize="15dp"
+        android:textColor="@color/colorLavanderDark"
+        android:id="@+id/btnSendFeedback"
+        android:background="@drawable/button_background"/>
+</LinearLayout>

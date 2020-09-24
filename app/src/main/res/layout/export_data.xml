@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLavanderDark"
+    tools:context="com.example.manishrchandran.AndroidApp.ResetPin">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/colorLavanderDark"
+        android:gravity="bottom"
+        android:text="Export data"
+        android:textAlignment="center"
+        android:textColor="#F2F1F4"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtdwnld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorLavanderDark"
+        android:gravity="bottom"
+        android:textColor="#F2F1F4"
+        android:text="Do you want to download data to your device?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/btnDownload"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_background"
+        android:text="Download"
+        android:textColor="@color/colorLavanderDark"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/txtdwnld"
+        app:layout_constraintTop_toBottomOf="@+id/txtdwnld" />
+
+    <TextView
+        android:id="@+id/txtemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@color/colorLavanderDark"
+        android:gravity="bottom"
+        android:text="Do you want to send the data as email?"
+        android:textColor="#F2F1F4"
+        app:layout_constraintStart_toStartOf="@+id/txtdwnld"
+        app:layout_constraintTop_toBottomOf="@+id/btnDownload" />
+
+    <EditText
+        android:id="@+id/txtEMsg"
+        android:layout_width="300dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:background="@drawable/edit_text_boarder"
+        android:gravity="top"
+        android:hint="\t Message"
+        android:textColor="@color/colourWhite"
+        android:textColorHint="@color/colorLightLightLavender"
+        app:layout_constraintStart_toStartOf="@+id/txtemail"
+        app:layout_constraintTop_toBottomOf="@+id/mailID" />
+
+    <EditText
+        android:id="@+id/mailID"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_weight="1"
+        android:background="@drawable/edit_text_boarder"
+        android:gravity="top"
+        android:hint="\t email id"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colourWhite"
+        android:textColorHint="@color/colorLightLightLavender"
+        app:layout_constraintStart_toStartOf="@+id/txtemail"
+        app:layout_constraintTop_toBottomOf="@+id/txtemail" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/button_background"
+        android:text="Send"
+        android:textColor="@color/colorLavanderDark"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtEMsg"
+        app:layout_constraintTop_toBottomOf="@+id/txtEMsg" />
+</android.support.constraint.ConstraintLayout>

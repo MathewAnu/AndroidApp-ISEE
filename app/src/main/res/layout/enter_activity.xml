@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/enterAct"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLavanderDark">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/colorLavanderDark"
+        android:gravity="bottom"
+        android:text="Enter Activity"
+        android:textAlignment="center"
+        android:textColor="#F2F1F4"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="416dp"
+        android:layout_height="687dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLavanderDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Spinner
+                android:id="@+id/enter_category"
+                android:layout_width="255dp"
+                android:layout_height="40dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.185"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/enter_activity"
+                android:layout_width="351dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_boarder"
+                android:backgroundTint="@color/lavenderLight"
+                android:ems="5"
+                android:hint="\t Activity*"
+                android:inputType="textPersonName"
+                android:textColor="@color/colourWhite"
+                android:textColorHint="@color/colorLightLightLavender"
+                app:layout_constraintStart_toStartOf="@+id/enter_category"
+                app:layout_constraintTop_toBottomOf="@+id/enter_category" />
+
+            <EditText
+                android:id="@+id/enter_description"
+                android:layout_width="352dp"
+                android:layout_height="118dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/edit_text_boarder"
+                android:backgroundTint="@color/lavenderLight"
+                android:ems="10"
+                android:hint=" \t Description"
+                android:inputType="textPersonName"
+                android:textColor="@color/colourWhite"
+                android:textColorHint="@color/colorLightLightLavender"
+                app:layout_constraintStart_toStartOf="@+id/enter_activity"
+                app:layout_constraintTop_toBottomOf="@+id/enter_activity" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="361dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintStart_toStartOf="@+id/enter_description"
+                app:layout_constraintTop_toBottomOf="@+id/enter_description">
+
+                <EditText
+                    android:id="@+id/enter_date"
+                    android:layout_width="125dp"
+                    android:layout_height="69dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/edit_text_boarder"
+                    android:backgroundTint="@color/lavenderLight"
+                    android:ems="10"
+                    android:hint="Date*"
+                    android:inputType="date"
+                    android:textAlignment="center"
+                    android:textColor="@color/colourWhite"
+                    android:textColorHint="@color/colorLightLightLavender"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.129"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.527" />
+
+                <EditText
+                    android:id="@+id/enter_time"
+                    android:layout_width="103dp"
+                    android:layout_height="69dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="188dp"
+                    android:background="@drawable/edit_text_boarder"
+                    android:backgroundTint="@color/lavenderLight"
+                    android:ems="10"
+                    android:hint="start time*"
+                    android:inputType="time"
+                    android:textAlignment="center"
+                    android:textColor="@color/colourWhite"
+                    android:textColorHint="@color/colorLightLightLavender"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.568"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.736" />
+
+                <EditText
+                    android:id="@+id/enter_duration"
+                    android:layout_width="85dp"
+                    android:layout_height="69dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edit_text_boarder"
+                    android:backgroundTint="@color/lavenderLight"
+                    android:ems="10"
+                    android:hint="Duration*"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@color/colourWhite"
+                    android:textColorHint="@color/colorLightLightLavender"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.911"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.527" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Do you want to repeat this activity?"
+                android:textColor="@color/colourWhite"
+                app:layout_constraintStart_toStartOf="@+id/enter_description"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintStart_toStartOf="@+id/enter_description"
+                app:layout_constraintTop_toBottomOf="@+id/textView">
+
+                <RadioButton
+                    android:id="@+id/daily"
+                    android:layout_width="86dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:buttonTint="@android:color/white"
+                    android:text="Daily"
+                    android:textColor="@color/colourWhite" />
+
+
+                <RadioButton
+                    android:id="@+id/weekly"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:buttonTint="@android:color/white"
+                    android:text="Weekly"
+                    android:textColor="@color/colourWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.719" />
+
+                <RadioButton
+                    android:id="@+id/Monthly"
+                    android:layout_width="83dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:buttonTint="@android:color/white"
+                    android:text="Monthly"
+                    android:textColor="@color/colourWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.848"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.719" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/enter_enddate"
+                android:layout_width="125dp"
+                android:layout_height="69dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text_boarder"
+                android:backgroundTint="@color/lavenderLight"
+                android:ems="10"
+                android:hint="End date"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textColor="@color/colourWhite"
+                android:textColorHint="@color/colorLightLightLavender"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_background"
+                android:text="Save"
+                android:textColor="@color/colorLavanderDark"
+                android:textSize="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.544"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enter_enddate" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
