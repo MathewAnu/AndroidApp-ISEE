@@ -49,36 +49,45 @@ public class ExportData extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        saveDataToFile(false);
+                        boolean contentAvailable = saveDataToFile(false);
+                        if(contentAvailable) {
+                            String to = emailID.getText().toString();
+                            String subject = "TimeTracker Data";
+                            String message = Message.getText().toString();
 
-                        String to=emailID.getText().toString();
-                        String subject="TimeTracker Data";
-                        String message=Message.getText().toString();
-
-                        Intent email = new Intent(Intent.ACTION_SEND);
-                        email.putExtra(Intent.EXTRA_EMAIL, new String[]{ to});
-                        email.putExtra(Intent.EXTRA_SUBJECT, subject);
-                        email.putExtra(Intent.EXTRA_TEXT, message);
-                        File root = Environment.getExternalStorageDirectory();
-                        File file = new File(root, FILE_NAME);
+                            Intent email = new Intent(Intent.ACTION_SEND);
+                            email.putExtra(Intent.EXTRA_EMAIL, new String[]{to});
+                            email.putExtra(Intent.EXTRA_SUBJECT, subject);
+                            email.putExtra(Intent.EXTRA_TEXT, message);
+                            File root = Environment.getExternalStorageDirectory();
+                            File file = new File(root, FILE_NAME);
+                        /*
                         if (!file.exists() || !file.canRead()) {
+
+                        }
+
+                         */
+                            Uri uri = Uri.parse("file://" + file);
+                            email.putExtra(Intent.EXTRA_STREAM, uri);
+                            email.setType("message/rfc822");
+
+                            startActivity(Intent.createChooser(email, "Choose an Email client :"));
+                        }
+                        else
+                        {
                             Toast.makeText(ExportData.this, "Attachment Error", Toast.LENGTH_SHORT).show();
                             finish();
                             return;
                         }
-                        Uri uri = Uri.parse("file://" + file);
-                        email.putExtra(Intent.EXTRA_STREAM, uri);
-                        email.setType("message/rfc822");
-
-                        startActivity(Intent.createChooser(email, "Choose an Email client :"));
                     }
                 });
     }
 
-    public void saveDataToFile(boolean showToast){
+    public boolean saveDataToFile(boolean showToast){
         Cursor result = myDb.getAllData();
         if (result.getCount() == 0) {
             showMessage("Error","Nothing found in the Databse");
+            return false;
         }
         else {
             StringBuffer buffer = new StringBuffer();
@@ -120,6 +129,7 @@ public class ExportData extends AppCompatActivity {
                     }
                 }
             }
+            return true;
         }
     }
     public void showMessage (String title, String Message)
