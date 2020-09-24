@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorLavanderDark"
-    tools:context="com.example.manishrchandran.AndroidApp.ResetPin">
+    tools:context="com.example.manishrchandran.AndroidApp.Security">
 
     <TextView
         android:id="@+id/textView5"

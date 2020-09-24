@@ -29,7 +29,6 @@ public class AnalyseActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Cursor result = myDb.getAllData();
                 if (result.getCount() == 0) {
-                    // show a message that database is empty. Go back to main menu
                     showMessage("Error","Nothing found");
 
                 }
@@ -38,24 +37,16 @@ public class AnalyseActivity extends AppCompatActivity {
                     StringBuffer buffer = new StringBuffer();
                     while (result.moveToNext())
                     {
-                        //buffer.append("Id :" + result.getString(0) + "\n");
                         buffer.append("Category : " + result.getString(1) + "\n");
                         buffer.append("Activity : " + result.getString(2) + "\n");
-                        // buffer.append("category" + res.getString(2) +"\n");
                         buffer.append("Date : " + result.getString(3) + "\n");
                         buffer.append("Description : " + result.getString(4) + "\n");
-                        //buffer.append("color" + res.getString(5) +"\n");
                         buffer.append("Time : " + result.getString(5) + "\n");
                         buffer.append("Duration : " + result.getString(6) + "\n\n");
-                        //buffer.append("enddate" + res.getString(6) +"|\n\n");
-                        //                    buffer.append("repeatvalue" + res.getString(0) +"|n");
-
-                        //showMessage("Data",buffer.toString());
                         dataView.setText(buffer.toString());
                     }
 
                 }
-
 
             }
         });
@@ -68,8 +59,6 @@ public class AnalyseActivity extends AppCompatActivity {
             }
         } );
 }
-
-
 
     public void showMessage (String title, String Message)
     {

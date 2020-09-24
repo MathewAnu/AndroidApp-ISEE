@@ -17,17 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.manishrchandran.AndroidApp.ResetPin" />
+        <activity android:name="com.example.manishrchandran.AndroidApp.Security" />
         <activity android:name="com.example.manishrchandran.AndroidApp.MainMenu" />
-        <activity
-            android:name="com.example.manishrchandran.AndroidApp.EnterActivity"
-            android:label="Enter Activity" />
+        <activity android:name="com.example.manishrchandran.AndroidApp.EnterActivity" />
         <activity android:name="com.example.manishrchandran.AndroidApp.ViewAllEntries" />
         <activity android:name="com.example.manishrchandran.AndroidApp.SecurityQuestion" />
         <activity android:name="com.example.manishrchandran.AndroidApp.ExportData" />
-        <activity android:name="com.example.manishrchandran.AndroidApp.AnalyseActivity" android:label="View and Delete"/>
-        <activity android:name="com.example.manishrchandran.AndroidApp.SendFeedback"
-            android:label="Send Feedback" />
+        <activity android:name="com.example.manishrchandran.AndroidApp.AnalyseActivity"/>
+        <activity android:name="com.example.manishrchandran.AndroidApp.SendFeedback"/>
 
     </application>
     <uses-permission android:name="android.permission.INTERNET"/>

@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class ResetPin extends AppCompatActivity {
+public class Security extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs" ;
     Button b, a;
@@ -48,15 +48,15 @@ public class ResetPin extends AppCompatActivity {
                     boolean status = editor.commit();
                     //sharedpreferences.getString("Password", null)
                     if (status) {
-                        Toast.makeText(ResetPin.this, "Password Changed", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Security.this, "Password Changed", Toast.LENGTH_LONG).show();
                     }
                     else{
-                        Toast.makeText(ResetPin.this, "Error! \n Unable to change password!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Security.this, "Error! \n Unable to change password!", Toast.LENGTH_LONG).show();
                     }
                 }
                 else
                 {
-                    Toast.makeText(ResetPin.this,"Passwords doesn't match!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Security.this,"Passwords doesn't match!",Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -70,10 +70,10 @@ public class ResetPin extends AppCompatActivity {
                 editor.putString("Question", String.valueOf(spinnerQ.getSelectedItem()));
                 boolean status = editor.commit();
                 if (status) {
-                        Toast.makeText(ResetPin.this, "Data saved", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Security.this, "Data saved", Toast.LENGTH_LONG).show();
                 }
                 else{
-                        Toast.makeText(ResetPin.this, "Error! \n Unable to save data!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(Security.this, "Error! \n Unable to save data!", Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -83,7 +83,7 @@ public class ResetPin extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent j = new Intent(ResetPin.this, MainMenu.class);
+        Intent j = new Intent(Security.this, MainMenu.class);
         startActivity(j);
     }
 }

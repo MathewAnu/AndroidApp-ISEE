@@ -62,15 +62,11 @@ public class ExportData extends AppCompatActivity {
                         startActivity(Intent.createChooser(email, "Choose an Email client :"));
                     }
                 });
-
-
     }
 
     public void saveDataToFile(boolean showToast){
-        //Data = "This is the content ";
         Cursor result = myDb.getAllData();
         if (result.getCount() == 0) {
-            // show a message that database is empty. Go back to main menu
             showMessage("Error","Nothing found in the Databse");
         }
         else {
@@ -89,7 +85,6 @@ public class ExportData extends AppCompatActivity {
                 fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
                 fos.write(Data.getBytes());
                 if (showToast) {
-                    //Toast.makeText(this, "Saved to " + getFilesDir() + "/" + FILE_NAME,Toast.LENGTH_LONG).show();
                     AlertDialog alertDialog = new AlertDialog.Builder(
                             ExportData.this).create();
                     alertDialog.setTitle("Data Saved to Device ");
@@ -99,8 +94,6 @@ public class ExportData extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), " Done", Toast.LENGTH_SHORT).show();
                         }
                     });
-
-                    // Showing Alert Message
                     alertDialog.show();
                 }
             } catch (FileNotFoundException e) {

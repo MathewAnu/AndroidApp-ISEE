@@ -62,7 +62,7 @@ public class MainMenu extends AppCompatActivity {
         fifth.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent j = new Intent(MainMenu.this, ResetPin.class);
+                Intent j = new Intent(MainMenu.this, Security.class);
                 startActivity(j);
             }
         });
@@ -76,9 +76,6 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(j);
             }
         });
-
-
-
 
     }
 

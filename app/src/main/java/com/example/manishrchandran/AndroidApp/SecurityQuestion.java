@@ -46,7 +46,7 @@ public class SecurityQuestion extends AppCompatActivity {
                         ipAnswer = a.getText().toString();
                         if (Answer.equals(ipAnswer)) {
                             Toast.makeText(SecurityQuestion.this, "Answer is correct", Toast.LENGTH_LONG).show();
-                            Intent j = new Intent(SecurityQuestion.this, ResetPin.class);
+                            Intent j = new Intent(SecurityQuestion.this, Security.class);
                             startActivity(j);
                         }
                         else
