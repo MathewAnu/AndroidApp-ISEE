@@ -21,8 +21,8 @@
 
     <TextView
         android:id="@+id/txtQ"
-        android:layout_width="362dp"
-        android:layout_height="73dp"
+        android:layout_width="317dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         android:background="@color/colorLavanderDark"
         android:text="\n \tQuestion?"

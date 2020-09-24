@@ -30,7 +30,7 @@ public class SecurityQuestion extends AppCompatActivity {
         b = (Button) findViewById(R.id.btnSubmit);
 
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        if (sharedpreferences.contains("Password")) {
+        if (sharedpreferences.contains("Question")&&sharedpreferences.contains("Answer")) {
             Question = sharedpreferences.getString("Question", null);
             Answer = sharedpreferences.getString("Answer", null);
         } else {

@@ -49,8 +49,7 @@ public class ExportData extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        boolean contentAvailable = saveDataToFile(false);
-                        if(contentAvailable) {
+                        saveDataToFile(false);
                             String to = emailID.getText().toString();
                             String subject = "TimeTracker Data";
                             String message = Message.getText().toString();
@@ -60,34 +59,30 @@ public class ExportData extends AppCompatActivity {
                             email.putExtra(Intent.EXTRA_SUBJECT, subject);
                             email.putExtra(Intent.EXTRA_TEXT, message);
                             File root = Environment.getExternalStorageDirectory();
-                            File file = new File(root, FILE_NAME);
-                        /*
+                            //File file = new File(root, FILE_NAME);
+                        File file = new File(getFilesDir(), FILE_NAME);
+
                         if (!file.exists() || !file.canRead()) {
+                         Toast.makeText(ExportData.this, "Attachment Error"+file.exists()+file.canRead(), Toast.LENGTH_SHORT).show();
+                            finish();
+                            return;
 
                         }
-
-                         */
-                            Uri uri = Uri.parse("file://" + file);
+                            Uri uri = Uri.parse("file://" + file.getAbsolutePath());
                             email.putExtra(Intent.EXTRA_STREAM, uri);
                             email.setType("message/rfc822");
 
                             startActivity(Intent.createChooser(email, "Choose an Email client :"));
-                        }
-                        else
-                        {
-                            Toast.makeText(ExportData.this, "Attachment Error", Toast.LENGTH_SHORT).show();
-                            finish();
-                            return;
-                        }
+
+
                     }
                 });
     }
 
-    public boolean saveDataToFile(boolean showToast){
+    public void saveDataToFile(boolean showToast){
         Cursor result = myDb.getAllData();
         if (result.getCount() == 0) {
             showMessage("Error","Nothing found in the Databse");
-            return false;
         }
         else {
             StringBuffer buffer = new StringBuffer();
@@ -129,7 +124,6 @@ public class ExportData extends AppCompatActivity {
                     }
                 }
             }
-            return true;
         }
     }
     public void showMessage (String title, String Message)
