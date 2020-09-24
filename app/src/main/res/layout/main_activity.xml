@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorLavanderDark"
     android:gravity="center"
-    tools:context="com.example.manishrchandran.AndroidApp.MainActivity">
+    tools:context="com.example.activitymanager.AndroidApp.MainActivity">
 
     <TextView
         android:id="@+id/textView3"

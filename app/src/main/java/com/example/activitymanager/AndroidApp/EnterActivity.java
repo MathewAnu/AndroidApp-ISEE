@@ -1,4 +1,4 @@
-package com.example.manishrchandran.AndroidApp;
+package com.example.activitymanager.AndroidApp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

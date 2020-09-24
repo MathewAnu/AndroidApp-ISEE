@@ -1,5 +1,4 @@
-package com.example.manishrchandran.AndroidApp;
-
+package com.example.activitymanager.AndroidApp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -8,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.database.Cursor;
 import android.widget.TextView;
-
 
 public class AnalyseActivity extends AppCompatActivity {
 

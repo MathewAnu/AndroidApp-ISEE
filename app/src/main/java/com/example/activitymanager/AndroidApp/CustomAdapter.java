@@ -1,4 +1,4 @@
-package com.example.manishrchandran.AndroidApp;
+package com.example.activitymanager.AndroidApp;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -29,6 +29,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         View view = inflater.inflate(R.layout.row, parent, false);
         return new MyViewHolder(view);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {

@@ -1,4 +1,4 @@
-package com.example.manishrchandran.AndroidApp;
+package com.example.activitymanager.AndroidApp;
 
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.database.Cursor;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.example.activitymanager.AndroidApp.CustomAdapter;
+
 import java.util.ArrayList;
 
 public class ViewAllEntries extends AppCompatActivity {
