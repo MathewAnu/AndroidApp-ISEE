@@ -4,13 +4,16 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -56,7 +59,15 @@ public class ExportData extends AppCompatActivity {
                         email.putExtra(Intent.EXTRA_EMAIL, new String[]{ to});
                         email.putExtra(Intent.EXTRA_SUBJECT, subject);
                         email.putExtra(Intent.EXTRA_TEXT, message);
-                        email.putExtra(Intent.ACTION_ATTACH_DATA, getFilesDir() + "/" + FILE_NAME);
+                        File root = Environment.getExternalStorageDirectory();
+                        File file = new File(root, FILE_NAME);
+                        if (!file.exists() || !file.canRead()) {
+                            Toast.makeText(ExportData.this, "Attachment Error", Toast.LENGTH_SHORT).show();
+                            finish();
+                            return;
+                        }
+                        Uri uri = Uri.parse("file://" + file);
+                        email.putExtra(Intent.EXTRA_STREAM, uri);
                         email.setType("message/rfc822");
 
                         startActivity(Intent.createChooser(email, "Choose an Email client :"));
