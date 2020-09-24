@@ -59,7 +59,6 @@ public class ExportData extends AppCompatActivity {
                             email.putExtra(Intent.EXTRA_SUBJECT, subject);
                             email.putExtra(Intent.EXTRA_TEXT, message);
                             File root = Environment.getExternalStorageDirectory();
-                            //File file = new File(root, FILE_NAME);
                         File file = new File(getFilesDir(), FILE_NAME);
 
                         if (!file.exists() || !file.canRead()) {
